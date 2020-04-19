@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+service mysql start
+mysql mysql < setup.sql
+mysql IntroDB < web/queries.sql
+

@@ -1,0 +1,21 @@
+<html> 
+    <body> 
+        <h3>{{group_name}}</h3>
+        <table>
+        {% for user in users %}
+        <th>Username</th>
+        <th>Remove</th>
+        <tr>
+            <td>{{user['username']}}</td>
+            <td>
+                <form action='/delete_from_group/{{group_name}}' method="POST" 
+            </td>
+        </tr>
+        
+        {% endfor %}
+        </table>
+            <p></p>
+        <a href='/home'>Home</a>
+
+    </body>
+</html>

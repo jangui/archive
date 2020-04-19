@@ -1,0 +1,16 @@
+<html>
+<body>
+   <h3>Groups:</h3> 
+    <table>
+    <th>Group Name</th>
+
+    {% for group in groups %}
+    <tr>
+        <td><a href='/group/{{group['groupName']}}'>{{group['groupName']}}</a></td>
+    </tr>
+    {% endfor %}
+    </table>
+    <p></p>
+        <a href='/home'>Home</a>
+    </body>
+    </html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+<body>
+    <h1>Welcome {{username}}</h1>
+    <h3>Update Account Info</h3>
+    <form action="/updateAccount" method="POST" enctype="multipart/form-data">
+	<input type="password" name = "password" placeholder="password" required/></br>
+	<input type="text" name = "fname" placeholder="fname" required/> </br>
+	<input type="text" name = "lname" placeholder="lname" required/></br>
+	avatar: <input type="file" name = "avatar" placeholder="avatar" required/> </br>
+	<input type="text" name = "bio" placeholder="bio" required/> </br>
+    <p>Private Account?</p>
+    <select name="isPrivate">
+        <option value='1'>Yes</option>
+        <option value='0'>No</option>
+    </select>
+    <p></p>
+	<input type="submit" value = Update />
+	{% if error %}
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+	{% endif %}
+</form>
+
+<a href="/">Go back</a>
+
+</body>
+
+
+</html>

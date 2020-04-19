@@ -1,0 +1,39 @@
+<html>
+<head>
+</head>
+<body>
+	<h1>Welcome {{username}}</h1> 
+    <a href='/accountpage'>account</a>
+    <a href='/postpage'>post</a>
+    <a href='/followers'>followers</a>
+    <a href='/groups'>groups</a>
+<style type="text/css">
+	table, th, td{
+		border: 1px solid black;
+	}
+</style>
+
+<!--
+Here are your posts:
+
+<table>
+	<th>Time</th>
+	<th>Post</th>
+
+{% for line in posts %}
+	<tr>
+		<td>{{line.ts}}</td>
+		<td>{{line.blog_post}}</td>
+	</tr>
+{% endfor %}
+</table>
+
+<a href="/select_blogger">Select a blogger</a>
+-->
+<br>
+<a href="/logout">Logout</a>
+
+</body>
+
+
+</html>

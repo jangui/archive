@@ -1,0 +1,18 @@
+<html>
+    <body>
+ <h3>Post Image:</h3>
+    <form action="/post" method="POST" enctype="multipart/form-data">
+        Image: <input type="file" name = "image" placeholder="image" required/> </br>
+        <p></p>
+        <input type="text" name = "caption" placeholder="caption" required/> </br>
+        <p> Share Preferences </p>
+        <select name="allFollowers"> 
+            <option value=0>Close Friends</option>
+            <option value=1>All Followers</option>
+        </select><p></p>
+        <input type="submit" value = "Post Image" /> 
+
+    </form>
+    <a href="/home">Home</a>
+    </body>
+    </html>

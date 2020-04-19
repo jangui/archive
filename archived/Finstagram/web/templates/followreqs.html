@@ -1,0 +1,28 @@
+<html>
+<body> 
+Your follow requests:
+
+<table>
+    <th>Username</th>
+    <th>Accept Follow</th>
+    <th>Confirm?</th>
+
+    {% for item in followreqs %}
+    <tr>
+        <td>{{item['followerUsername']}}</td>
+        <td>  <form action="/accept_follow/{{item['followerUsername']}}" method="POST" enctype="multipart/form-data">
+        <select name="Accept"> 
+            <option value=0>No</option>
+            <option value=1>Yes</option>
+        </select>
+        </td>
+        <td><input type="submit" value = "Confirm" /> <td>
+
+    </tr>
+    {% endfor %}
+</table>
+    <a href='/home'>Home</a>
+
+</body>
+
+</html>
